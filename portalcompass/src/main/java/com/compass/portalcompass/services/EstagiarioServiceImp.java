@@ -53,7 +53,6 @@ public class EstagiarioServiceImp implements EstagiarioService {
 	public EstagiarioDTO update(Long id, EstagiarioFormDTO estagiarioBody) {
 		Estagiario estagiario = repositorio.findById(id)
 				.orElseThrow(() -> new NaoEncontradoExcecao(id));
-		estagiario.setMatricula(estagiarioBody.getMatricula());
 		estagiario.setNome(estagiarioBody.getNome());
 		estagiario.setEmail(estagiarioBody.getEmail());
 		estagiario.setTipoBolsas(estagiarioBody.getTipoBolsas());
